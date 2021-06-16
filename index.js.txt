@@ -1,0 +1,39 @@
+document.write(Date());
+
+//ตรวจสอบ ชื่อ
+let answers = document.querySelectorAll('.textunder');
+let answersForm = document.querySelector('.form-group');
+let over = document.getElementById('textover');
+
+// ตรวจสอบ คำถาม
+let text = document.querySelectorAll('.text-area');
+let nottext = document.getElementById('text');
+
+function checkAnswer(event) {
+     let toolong = false;
+     answers.forEach((answers) => {  //Loop นับตัวที่เราใส่
+        if(answers.value.length > 50 || answers.value.length < 1){  //ตัวอักษรเกิน 20 ตัว
+              toolong = true;   
+        }
+    });
+    if(toolong){
+        event.preventDefault(); // ไม่ให้ส่งไปที่ Back end
+        over.style.color = "red";
+        over.innerHTML = "Your Input is over  than 50 character or less than 1"; // แจ้งเตือน
+    }
+}
+
+function checktext(event){
+     text.forEach((text)=>{
+        if(text.value.length < 5){
+            event.preventDefault();
+           nottext.style.color = "red";
+           nottext.innerHTML = "Please answer charcater more than 5 char";    
+        }    
+     }); 
+}
+                                //eventอะไร
+answersForm .addEventListener('submit',checkAnswer); // สำหรับใสevent 
+                                         //ฟังก์ชันอะไร
+answersForm .addEventListener('submit',checktext);
+

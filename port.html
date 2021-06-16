@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">WERADET NOPSOMBUN</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#profile"><p class="text-nav">About Me</p></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#skills"><p class="text-nav">My skills</p></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact"><p class="text-nav">Contact</p></a>
+      </li>
+      <li class="nav-item" style="float: left;">
+        <a class="nav-link" href="#contact"><p class="text-nav">Contact</p></a>
+      </li>
+    </ul>
+  </nav>
+  <div class="clearfix"></div>
+  <header class="myheader" id="header">
+    <div class="container">
+      <div class="myheader-area">
+        <h1 class="h1">MY portfolio</h1>
+        <p class="p1">My name is Weradet Nopsombun</p>
+      </div>
+    </div>
+  </header>
+  <section id="profile">
+    <div class="container">
+      <table class="table table-hover">
+        <tr>
+          <td colspan="2">
+            <h1>About Me</h1>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="mypic"></div>
+          </td>
+          <td>
+            <p>Name : Weradet Nopsombun Nickname : fluk</p>
+            <p>Birthday : 30/09/43 </p>
+            <p>Software Engineering Burapha University</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">รายละเอียด</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+     <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  </section>
+  <section id="skills">
+    <div class="container2">
+      <table class="table  table-borderless">
+        <thead>
+          <tr>
+            <td colspan="7">
+              <h1>My Skills</h1>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <i class="devicon-html5-plain"></i>
+              <p onmouseover="mOverhtml(this)" onmouseout="mOuthtml(this)">HTML5</p>
+            </td>
+            <td><i class="devicon-css3-plain"></i>
+              <p onmouseover="mOvercss(this)" onmouseout="mOutcss(this)">CSS3</p>
+            </td>
+            <td><i class="devicon-bootstrap-plain" aria-hidden="true"></i>
+              <p onmouseover="mOverboot(this)" onmouseout="mOutboot(this)">bootstrap</p>
+            </td>
+            <td><i class="devicon-github-original"></i>
+              <p onmouseover="mOvergit(this)" onmouseout="mOutgit(this)">Github</p>
+            </td>
+            <td><i class="devicon-cplusplus-plain"></i>
+              <p onmouseover="mOvercpp(this)" onmouseout="mOutcpp(this)">C++</p>
+            </td>
+            <td><i class="devicon-php-plain"></i>
+              <p onmouseover="mOverphp(this)" onmouseout="mOutphp(this)">Php</p>
+            </td>
+            <td><i class="devicon-mysql-plain"></i>
+              <p onmouseover="mOversql(this)" onmouseout="mOutsql(this)">Mysql</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h1>Contact Me</h1>
+      <button type="button" class="btn btn-primary">facebook</button>
+      <button type="button" class="btn btn-primary">IG</button>
+      <br><br>
+      <form class="form-group">
+        <label class="mb-2 mr-sm-2">Your Name</label>
+        <input class="form-control mb-2 mr-sm-2 textunder" type="text" placeholder="Your Name"><br>
+        <p id = "textover" ></p>
+        <label class="mb-2 mr-sm-2">Your Email</label><br>
+        <input class="form-control mb-2 mr-sm-2" type="email" placeholder="Your Email"><br>
+        <label class="mb-2 mr-sm-2">Your Message</label><br>
+        <textarea class="form-control mb-2 mr-sm-2 text-area" name="" id="" cols="30" rows="10"
+          placeholder="Your Message (more than 5 char)"></textarea><br>
+        <p id="text"></p>
+        <button type="submit" class="btn btn-primary">send</button><br>
+      </form>
+    </div>
+  </section>
+  <footer class="bg-light text-center">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2020 Copyright:
+      <p>weradet Nopsombun</p>
+      <script src="index.js"></script>
+    </div>
+  </footer>
+</body>
+</html>
